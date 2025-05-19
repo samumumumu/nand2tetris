@@ -7,5 +7,45 @@
 // When a key is pressed (any key), the program blackens the screen,
 // i.e. writes "black" in every pixel. When no key is pressed, 
 // the screen should be cleared.
+@n
+M=0
+(LOOP)
+@KBD
+D=M
+@WHITE
+D;JEQ
 
-//// Replace this comment with your code.
+//(BLACK)
+@n
+D=M
+@SCREEN
+A=D+A
+M=-1
+@n
+M=M+1
+//@8192
+//@500
+//D=A-D
+//@LOOP
+//D;JGT
+@LOOP
+0;JMP
+(WHITE)
+@n
+//n<0の時はそこから引かない
+D=M
+@LOOP
+D;JLT
+@SCREEN
+A=D+A
+M=0
+@n
+M=M-1
+//@8192
+//@500
+//D=A-D
+//@LOOP
+//D;JGT
+
+@LOOP
+0;JMP
