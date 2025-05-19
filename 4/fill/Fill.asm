@@ -14,8 +14,6 @@ M=0
 D=M
 @WHITE
 D;JEQ
-
-//(BLACK)
 @n
 D=M
 @SCREEN
@@ -23,11 +21,6 @@ A=D+A
 M=-1
 @n
 M=M+1
-//@8192
-//@500
-//D=A-D
-//@LOOP
-//D;JGT
 @LOOP
 0;JMP
 (WHITE)
@@ -41,11 +34,5 @@ A=D+A
 M=0
 @n
 M=M-1
-//@8192
-//@500
-//D=A-D
-//@LOOP
-//D;JGT
-
 @LOOP
 0;JMP
